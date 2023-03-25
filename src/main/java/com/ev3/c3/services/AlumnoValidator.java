@@ -37,8 +37,6 @@ public class AlumnoValidator implements Validator {
 
         if (StringUtils.isBlank(alumno.getEmail())) {
             errors.rejectValue("email", "NotEmpty");
-        } else if (new EmailValidator().isValid(alumno.getEmail(), null)) {
-            errors.rejectValue("email", "Pattern");
         }
     }
 }

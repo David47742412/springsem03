@@ -61,10 +61,9 @@ public class AlumnoController {
         return "redirect:/alumnos/";
     }
 
-    @GetMapping("/del/{id}/{isConfirm}")
-    public String Delete(@PathVariable("id") String id, @PathVariable("isConfirm") boolean isConfirm) {
-        if (isConfirm)
-            this._service.Crud('E', id,"", "", "", "", 0);
+    @GetMapping("/del/{id}/")
+    public String Delete(@PathVariable("id") String id) {
+        this._service.Crud('E', id,"", "", "", "", 0);
         return "redirect:/alumnos/";
     }
 
