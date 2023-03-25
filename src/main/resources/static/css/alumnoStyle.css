@@ -1,0 +1,104 @@
+.PriceInput span {
+    width: 14%;
+    background: #50d07f;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    .PriceInput {
+        width: 100%;
+    }
+
+    .PriceInput span {
+        width: 12%;
+        background: #50d07f;
+        color: white;
+    }
+}
+
+.marginTopFind {
+    margin: 2em;
+}
+
+.marginTopFind label {
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 991px) {
+    .PriceInput span {
+        width: 15%;
+        background: #50d07f;
+    }
+}
+
+.splitComponents {
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+.ListFindFor {
+    width: 20%;
+}
+
+.paddingTopFind {
+    margin-top: 1em;
+}
+
+.SizeListFind {
+    margin-left: 2.5%;
+    width: 10%;
+}
+
+.splitComponents label, span {
+    padding-right: 2.5em;
+    padding-left: 3em;
+    padding-top: 2em;
+}
+
+.styleButtonAction {
+    margin-top: 2em;
+    background: #50d07f;
+    border: none;
+    margin-bottom: 2em;
+}
+
+* {
+    font-family: poppins, sans-serif;
+}
+
+.mainTitleText h1 {
+    font-family: poppins-bold, sans-serif;
+}
+
+.mainTitleText p {
+    font-family: poppins, sans-serif;
+    color: #8f8e92;
+}
+
+.mainTitleText {
+    padding: .6em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .CenterInputs div {
+        padding-bottom: 1em;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .CenterInputs div {
+        padding-bottom: 1em;
+        margin-left: 22%;
+        width: 55%;
+    }
+}
+
+.backGroundForm {
+    background: #f9f9f9;
+    border-radius: 15px;
+}

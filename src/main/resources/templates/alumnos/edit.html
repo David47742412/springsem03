@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es"
+      xmlns:th="https://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <link href="/css/alumnoStyle.css" rel="stylesheet" type="text/css"/>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" rel="stylesheet">
+  <link href="/css/alumnoStyle.css" rel="stylesheet" type="text/css"/>
+  <title>Alumnos</title>
+</head>
+<body>
+<div class="container">
+  <form action="#" method="post" th:action="@{/alumnos/edit}" th:object="${alumno}">
+    <div class="backGroundForm">
+      <div class="row g-2">
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtId" name="Id" placeholder=" " th:field="*{codigo_alumno}"
+                 type="text">
+          <!-- No es necesario el id, se podria activar y desactivar el campo con js -->
+          <label class="" for="txtId">Código</label>
+        </div>
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtNombre" name="Nombre" placeholder=" " required
+                 th:field="*{nombre}" type="text">
+          <label class="" for="txtNombre">Nombre</label>
+        </div>
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtApellido" name="Apellido" placeholder=" "
+                 required th:field="*{apellido_paterno}" type="text">
+          <label for="txtApellido">Apellido Paterno</label>
+          <span class="text-danger"></span>
+        </div>
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtNroDoc" name="NroDoc" placeholder=" " required
+                 th:field="*{apellido_materno}" type="text">
+          <label class="" for="txtNroDoc">Apellido Materno</label>
+        </div>
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtDireccion" name="Direccion" placeholder=" " required
+                 th:field="*{email}" type="text">
+          <label class="" for="txtDireccion">Email</label>
+        </div>
+        <div class="form-floating mb-2 col-md-3 splitComponents">
+          <input class="form-control" id="txtCelular" name="Celular" placeholder=" " required
+                 th:field="*{ciclo_actual}" type="text">
+          <label class="" for="txtCelular">Ciclo</label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary styleButtonAction" id="btnAccion" type="submit">Realizar</button>
+      <a class="btn btn-secondary" th:href="@{/alumnos/}">Regresar</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>
