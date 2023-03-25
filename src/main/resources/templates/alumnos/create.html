@@ -24,28 +24,31 @@
                     <label class="" for="txtId">Código</label>
                 </div>
                 <div class="form-floating mb-2 col-md-3 splitComponents">
-                    <input class="form-control" id="txtNombre" name="Nombre" placeholder=" " required
+                    <input class="form-control" id="txtNombre" name="Nombre" placeholder=" "
                            th:field="*{nombre}" type="text">
                     <label class="" for="txtNombre">Nombre</label>
+                    <span class="text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
                 </div>
                 <div class="form-floating mb-2 col-md-3 splitComponents">
                     <input class="form-control" id="txtApellido" name="Apellido" placeholder=" "
-                           required th:field="*{apellido_paterno}" type="text">
+                           th:field="*{apellido_paterno}" type="text">
                     <label for="txtApellido">Apellido Paterno</label>
-                    <span class="text-danger"></span>
+                    <span class="text-danger" th:if="${#fields.hasErrors('apellido_paterno')}" th:errors="*{apellido_paterno}"></span>
                 </div>
                 <div class="form-floating mb-2 col-md-3 splitComponents">
-                    <input class="form-control" id="txtNroDoc" name="NroDoc" placeholder=" " required
+                    <input class="form-control" id="txtNroDoc" name="NroDoc" placeholder=" "
                            th:field="*{apellido_materno}" type="text">
                     <label class="" for="txtNroDoc">Apellido Materno</label>
+                    <span class="text-danger" th:if="${#fields.hasErrors('apellido_materno')}" th:errors="*{apellido_materno}"></span>
                 </div>
                 <div class="form-floating mb-2 col-md-3 splitComponents">
-                    <input class="form-control" id="txtDireccion" name="Direccion" placeholder=" " required
+                    <input class="form-control" id="txtDireccion" name="Direccion" placeholder=" "
                            th:field="*{email}" type="text">
                     <label class="" for="txtDireccion">Email</label>
+                    <span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
                 </div>
                 <div class="form-floating mb-2 col-md-3 splitComponents">
-                    <input class="form-control" id="txtCelular" name="Celular" placeholder=" " required
+                    <input class="form-control" id="txtCelular" name="Celular" placeholder=" "
                            th:field="*{ciclo_actual}" type="text">
                     <label class="" for="txtCelular">Ciclo</label>
                 </div>

@@ -1,6 +1,7 @@
 package com.ev3.c3.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.io.Serializable;
 
@@ -41,18 +42,22 @@ public class Alumno implements Serializable {
     @Column(name = "codigo_alumno")
     private String codigo_alumno;
 
+    @NotBlank
     @Basic(optional = false)
     @Column(name = "nombre")
     private String nombre;
 
+    @NotBlank
     @Basic(optional = false)
     @Column(name = "apellido_paterno")
     private String apellido_paterno;
 
+    @NotBlank
     @Basic(optional = false)
     @Column(name = "apellido_materno")
     private String apellido_materno;
 
+    @NotBlank
     @Basic(optional = false)
     @Column(name = "email")
     private String email;
